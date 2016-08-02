@@ -20,9 +20,9 @@ if (is_object($menu)) {
 </head>
 <body class="<?php echo $pageClass ? htmlspecialchars($pageClass) : ''; ?>">
     <?php if ($this->countModules('header')): ?>
-        <header id="header" role="banner">
-            <jdoc:include type="modules" name="header" />
-        </header>
+    <header id="header" role="banner">
+        <jdoc:include type="modules" name="header" />
+    </header>
     <?php endif; ?>
 
     <main id="main" role="main">
@@ -30,9 +30,9 @@ if (is_object($menu)) {
     </main>
 
     <?php if ($this->countModules('footer')): ?>
-        <footer id="footer" role="contentinfo">
-            <jdoc:include type="modules" name="footer" />
-        </footer>
+    <footer id="footer" role="contentinfo">
+        <jdoc:include type="modules" name="footer" />
+    </footer>
     <?php endif; ?>
 </body>
 </html>
