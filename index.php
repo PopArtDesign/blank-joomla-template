@@ -7,17 +7,17 @@
 </head>
 <body>
     <?php if ($this->countModules('header')): ?>
-        <header id="header">
+        <header id="header" role="banner">
             <jdoc:include type="modules" name="header" />
         </header>
     <?php endif; ?>
 
-    <main id="main">
+    <main id="main" role="main">
         <jdoc:include type="component" />
     </main>
 
     <?php if ($this->countModules('footer')): ?>
-        <footer id="footer">
+        <footer id="footer" role="contentinfo">
             <jdoc:include type="modules" name="footer" />
         </footer>
     <?php endif; ?>
