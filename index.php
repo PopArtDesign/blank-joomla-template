@@ -2,15 +2,12 @@
 
 defined('_JEXEC') or die;
 
-$app  = JFactory::getApplication();
-$menu = $app->getMenu()->getActive();
+use Joomla\CMS\Factory;
 
+$app         = Factory::getApplication();
+$menu        = $app->getMenu();
+$pageClass   = $menu->getActive()->getParams()->get('pageclass_sfx');
 $templateUrl = $this->baseurl . '/templates/' . $this->template;
-
-$pageClass = '';
-if (is_object($menu)) {
-    $pageClass = $menu->getParams()->get('pageclass_sfx');
-}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -18,7 +15,7 @@ if (is_object($menu)) {
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.css" type="text/css" />
 </head>
-<body class="<?php echo $pageClass ? htmlspecialchars($pageClass) : ''; ?>">
+<body class="<?php echo $pageClass ? \htmlspecialchars($pageClass) : ''; ?>">
     <?php if ($this->countModules('header')): ?>
     <header id="header" role="banner">
         <jdoc:include type="modules" name="header" />
