@@ -8,6 +8,8 @@ $app         = Factory::getApplication();
 $menu        = $app->getMenu();
 $pageClass   = $menu->getActive()->getParams()->get('pageclass_sfx');
 $templateUrl = $this->baseurl . '/templates/' . $this->template;
+
+$this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
