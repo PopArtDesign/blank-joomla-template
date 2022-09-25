@@ -9,7 +9,7 @@ $templateUrl = $this->baseurl . '/templates/' . $this->template;
 
 $pageClass = '';
 if (is_object($menu)) {
-    $pageClass = $menu->params->get('pageclass_sfx');
+    $pageClass = $menu->getParams()->get('pageclass_sfx');
 }
 ?>
 <!DOCTYPE html>
