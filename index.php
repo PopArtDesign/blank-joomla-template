@@ -24,11 +24,13 @@ if ($useJquery) {
     <jdoc:include type="head" />
 </head>
 <body class="<?php echo $pageClass ? \htmlspecialchars($pageClass) : ''; ?>">
-    <?php if ($this->countModules('header')): ?>
     <header id="header" role="banner">
-        <jdoc:include type="modules" name="header" />
+        <a href="<?php echo $this->baseurl; ?>">Home</a>
+
+        <?php if ($this->countModules('header')): ?>
+            <jdoc:include type="modules" name="header" />
+        <?php endif; ?>
     </header>
-    <?php endif; ?>
 
     <main id="main" role="main">
         <jdoc:include type="component" />
