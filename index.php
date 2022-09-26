@@ -3,13 +3,18 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
 
 $app         = Factory::getApplication();
 $menu        = $app->getMenu();
 $pageClass   = $menu->getActive()->getParams()->get('pageclass_sfx');
 $templateUrl = $this->baseurl . '/templates/' . $this->template;
+$useJquery   = (bool) $this->params->get('useJquery', 0);
 
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+if ($useJquery) {
+    HTMLHelper::_('jquery.framework');
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
