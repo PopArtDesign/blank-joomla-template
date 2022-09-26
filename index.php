@@ -21,7 +21,7 @@ if ($useJquery) {
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-	<jdoc:include type="head" />
+    <jdoc:include type="head" />
 </head>
 <body class="<?php echo $pageClass ? \htmlspecialchars($pageClass) : ''; ?>">
     <?php if ($this->countModules('header')): ?>
