@@ -12,6 +12,8 @@ $templateUrl = $this->baseurl . '/templates/' . $this->template;
 $useJquery   = (bool) $this->params->get('useJquery', 0);
 
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+$this->addStyleSheet($templateUrl . '/css/template.css');
+
 if ($useJquery) {
     HTMLHelper::_('jquery.framework');
 }
@@ -20,7 +22,6 @@ if ($useJquery) {
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
-	<link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.css" type="text/css" />
 </head>
 <body class="<?php echo $pageClass ? \htmlspecialchars($pageClass) : ''; ?>">
     <?php if ($this->countModules('header')): ?>
