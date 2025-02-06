@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" client="site">
-    <name>Base template</name>
+    <name>main</name>
     <version>1.0</version>
     <creationDate>2016-08</creationDate>
     <author>popartdesign.ru</author>
     <authorEmail>info@popartdesign.ru</authorEmail>
     <authorUrl>https://popartdesign.ru</authorUrl>
     <copyright>popartdesign.ru</copyright>
-    <description>Base template</description>
+    <description>Main template</description>
 
     <files>
         <filename>index.php</filename>
