@@ -22,7 +22,7 @@ $this->addStyleSheet($templateUrl . '/css/template.css');
         <a href="<?php echo $this->baseurl; ?>">Home</a>
 
         <?php if ($this->countModules('header')): ?>
-            <jdoc:include type="modules" name="header" />
+            <jdoc:include type="modules" name="header" style="html5" />
         <?php endif; ?>
     </header>
 
@@ -32,7 +32,7 @@ $this->addStyleSheet($templateUrl . '/css/template.css');
 
     <?php if ($this->countModules('footer')): ?>
     <footer id="footer" role="contentinfo">
-        <jdoc:include type="modules" name="footer" />
+        <jdoc:include type="modules" name="footer" style="html5" />
     </footer>
     <?php endif; ?>
 </body>
